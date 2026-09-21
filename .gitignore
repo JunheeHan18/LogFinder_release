@@ -2,3 +2,12 @@
 *.user
 *.tmp
 Thumbs.db
+
+# Release packages are published as GitHub Release assets, not committed here.
+# Committed archives stay in git history forever and make every clone heavier,
+# so build the zip locally and attach it to the release instead:
+#   gh release create v<version> --title "LogFinder_<version>" --notes-file RELEASE_NOTES_<version>.md <zip>
+# (LogFinder_v2.6.0.327.zip and LogFinder_v2.6.0.328.zip predate this rule and are
+#  still tracked, because those versions have no release asset - the committed
+#  archives are the only public download for them.)
+*.zip
